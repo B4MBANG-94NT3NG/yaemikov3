@@ -2164,55 +2164,60 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             let me = m.sender
             let timestampe = speed()
             let latensie = speed() - timestampe
-            xeonezy = `┌─❖
-│ Hi 👋 
-└┬❖  ${pushname} 
-┌┤✑  ${xeonytimewisher} 😄
-│└────────────┈ ⳹
-│
-└─ ɪɴꜰᴏ ʙᴏᴛ
-│ꜱᴘᴇᴇᴅ  : ${latensie.toFixed(4)} miliseconds
-│ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}
-│ʙᴏᴛ: ${global.botname}
-│ɴᴏᴍᴏʀ ᴏᴡɴᴇʀ : ${ownernumber}
-│ᴘʀᴇꜰɪx :  NO-PREFIX 
-│ᴍᴏᴅᴇ : ${XeonBotInc.public ? 'Public' : `Self`}
-│ʜᴏꜱᴛɴᴀᴍᴇ : ${os.hostname()}
-│ᴘʟᴀᴛꜰᴏʀᴍ : ${os.platform()}
-│
-└─ ɪɴꜰᴏ ᴜꜱᴇʀ
-│ɴᴀᴍᴀ : ${pushname}
-│ɴᴏᴍᴏʀ : @${me.split('@')[0]}
-│ꜱᴛᴀᴛᴜꜱ : ${isPrem ? '✅' : `❌`}
-│
-└─ ɪɴꜰᴏ ᴡᴀᴋᴛᴜ
-│ᴡᴀᴋᴛᴜ : ${xtime}
-│ᴛᴀɴɢɢᴀʟ : ${xdate}
-└┬────────────┈ ⳹
-   │✑ ꜱɪʟᴀʜᴋᴀɴ ᴘɪʟɪʜ *ᴍᴇɴᴜ*
-   │✑ ᴅɪʙᴀᴡᴀʜ *ɪɴɪ*
-┌└─────────────┈ ⳹
-│★.allmenu
-│★.cerpenmenu
-│★.downloadmenu
-│★.funmenu
-│★.aimenu
-│★.groupmenu
-│★.ownermenu
-│★.photooxymenu
-│★.ephoto360menu
-│★.textpromenu
-│★.animemenu
-│★.nsfwmenu
-│★.rpgmenu
-│★.randomphotomenu
-│★.randomvideomenu
-│★.stickermenu
-│★.databasemenu
-│★.stalkermenu
-│★.bugmenu
-│★.othermenu
+            xeonezy = `☰ *D A S B O A R D* ☰
+            
+ Hi 👋 
+ ${pushname} 
+ ${xeonytimewisher} 😄
+ 
+┍─────── *I N F O*
+│々 *ꜱᴘᴇᴇᴅ*  : ${latensie.toFixed(4)} miliseconds
+│々 *ʀᴜɴᴛɪᴍᴇ* : ${runtime(process.uptime())}
+│々 *ʙᴏᴛ*: ${global.botname}
+│々 *ɴᴏᴍᴏʀ ᴏᴡɴᴇʀ* : ${ownernumber}
+│々 *ᴘʀᴇꜰɪx* : ${global.prefix}
+│々 *ᴍᴏᴅᴇ : ${XeonBotInc.public ? 'Public' : `Self`}
+╰──────────⳹
+
+┍─────── *U S E R*
+│々 *ɴᴀᴍᴀ* : ${pushname}
+│々 *ɴᴏᴍᴏʀ* : @${me.split('@')[0]}
+│々 *ꜱᴛᴀᴛᴜꜱ* : ${isPrem ? '✅' : `❌`}
+╰──────────⳹
+
+┍─────── *T O D A Y*
+│々 *ᴡᴀᴋᴛᴜ* : ${xtime}
+│々 *ᴛᴀɴɢɢᴀʟ* : ${xdate}
+└────────────┈ ⳹
+
+⚝───『 *Menu* 』───⚝
+│々 .allmenu
+│々 .cerpenmenu
+│々 .downloadmenu
+│々 .funmenu
+│々 .aimenu
+│々 .groupmenu
+│々 .ownermenu
+│々 .photooxymenu
+│々 .ephoto360menu
+│々 .textpromenu
+│々 .animemenu
+│々 .nsfwmenu
+│々 .rpgmenu
+│々 .randomphotomenu
+│々 .randomvideomenu
+│々 .stickermenu
+│々 .databasemenu
+│々 .stalkermenu
+│々 .bugmenu
+│々 .othermenu
 └─────────────────┈ ⳹
+
+Thanks To :
+1. DgXeon (SC ORI)
+2. All Creator Bot
+
+
 - Follow My Instagram
 instagram.com/${global.socialm}⚡⚡
 ⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕
