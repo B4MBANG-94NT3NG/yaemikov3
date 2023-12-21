@@ -4831,7 +4831,7 @@ case 'tomp4': case 'tovideo': {
    let buff = getRandom('.jpg')
    await fs.writeFileSync('./'+buff, data)
    let medi = fs.readFileSync('./' + buff)
-  await XeonBotInc.sendMessage(from, { image: medi, caption:"Here you go!"}, { quoted: m })
+  await XeonBotInc.sendMessage(from, { image: medi, caption:mess.succes}, { quoted: m })
    setTimeout(() => { fs.unlinkSync(buff) }, 10000)
   }
   break
