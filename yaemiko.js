@@ -1263,7 +1263,7 @@ console.log(color('Download Video With ytdl-core'))
 let nana = ytdl(Link)
 .pipe(fs.createWriteStream(mp4File))
 .on('finish', async () => {
-await XeonBotInc.sendMessage(from, { video: fs.readFileSync(mp4File), caption: mess.succes, gifPlayback: false }, { quoted: gdyr })
+await XeonBotInc.sendMessage(from, { video: fs.readFileSync(mp4File), caption: `${mess.succes}`, gifPlayback: false }, { quoted: gdyr })
 fs.unlinkSync(`./${mp4File}`)
 })
 } catch (err) {
@@ -1972,7 +1972,7 @@ const { EmojiAPI } = require("emoji-api")
 const emoji = new EmojiAPI()
 emoji.get(satu)
 .then(emoji => {
-XeonBotInc.sendMessage(from, { caption: mess.success, image: {url: emoji.images[dua].url} }, {quoted:m})
+XeonBotInc.sendMessage(from, { caption: `${mess.succes}`s, image: {url: emoji.images[dua].url} }, {quoted:m})
 })
 } catch (e) {
 m.reply("Emoji error, please enter another emoji\nNOTE : Just enter 1 emoji")
@@ -2999,7 +2999,7 @@ case 'ss': case 'ssweb': {
 if (!q) return replygcxeon(`Example ${prefix+command} link`)
 await XeonStickWait()
 let krt = await scp1.ssweb(q)
-XeonBotInc.sendMessage(from,{image:krt.result,caption:mess.succes}, {quoted:m})
+XeonBotInc.sendMessage(from,{image:krt.result,caption:`${mess.succes}`}, {quoted:m})
 }
 break
 case 'join': {
@@ -3171,10 +3171,10 @@ if (!quoted) return replygcxeon(`Reply Image/Video`)
 await XeonStickWait()
 if (/image/.test(mime)) {
 anuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-XeonBotInc.sendMessage(m.chat, {image: {url:anuan}, caption: mess.succes, fileLength: "999", viewOnce : true},{quoted: m })
+XeonBotInc.sendMessage(m.chat, {image: {url:anuan}, caption: `${mess.succes}`, fileLength: "999", viewOnce : true},{quoted: m })
 } else if (/video/.test(mime)) {
 anuanuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-XeonBotInc.sendMessage(m.chat, {video: {url:anuanuan}, caption: mess.succes, fileLength: "99999999", viewOnce : true},{quoted: m })
+XeonBotInc.sendMessage(m.chat, {video: {url:anuanuan}, caption: `${mess.succes}`, fileLength: "99999999", viewOnce : true},{quoted: m })
 }
 }
 break
@@ -4026,7 +4026,7 @@ case 'remini': {
 			const { remini } = require('./lib/remini')
 			let media = await quoted.download()
 			let proses = await remini(media, "enhance")
-			XeonBotInc.sendMessage(m.chat, { image: proses, caption: mess.success}, { quoted: m})
+			XeonBotInc.sendMessage(m.chat, { image: proses, caption: `${mess.succes}`s}, { quoted: m})
 			}
 			break
 			case 'gimage': {
@@ -4081,7 +4081,7 @@ XeonStickWait()
 if (!q) return replygcxeon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
-XeonBotInc.sendMessage(m.chat, { caption: mess.succes, video: { url: data.watermark }}, {quoted:m})
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`, video: { url: data.watermark }}, {quoted:m})
 })
 }
 break
@@ -4831,7 +4831,7 @@ case 'tomp4': case 'tovideo': {
    let buff = getRandom('.jpg')
    await fs.writeFileSync('./'+buff, data)
    let medi = fs.readFileSync('./' + buff)
-  await XeonBotInc.sendMessage(from, { image: medi, caption:mess.succes}, { quoted: m })
+  await XeonBotInc.sendMessage(from, { image: medi, caption:`${mess.succes}`}, { quoted: m })
    setTimeout(() => { fs.unlinkSync(buff) }, 10000)
   }
   break
@@ -5309,7 +5309,7 @@ if (/freecreate/.test(command)) link = 'https://en.ephoto360.com/free-create-a-3
 if (/galaxystyle/.test(command)) link = 'https://en.ephoto360.com/create-galaxy-style-free-name-logo-438.html'
 if (/lighteffects/.test(command)) link = 'https://en.ephoto360.com/create-light-effects-green-neon-online-429.html'
 let haldwhd = await ephoto(link, q)
-XeonBotInc.sendMessage(m.chat, { image: { url: haldwhd }, caption: `${mess.success}` }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { image: { url: haldwhd }, caption: `${mess.succes}` }, { quoted: m })
 }
 break
 case 'shadow': 
@@ -5371,194 +5371,194 @@ if (/metalliceffect/.test(command)) link = 'https://photooxy.com/logo-and-text-e
 if (/embroiderytext/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/create-embroidery-text-online-191.html'
 if (/flamingtext/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html'
 let dehe = await photooxy.photoOxy(link, q)
-XeonBotInc.sendMessage(m.chat, { image: { url: dehe }, caption: `${mess.success}` }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { image: { url: dehe }, caption: `${mess.succes}` }, { quoted: m })
 }
 break
 case 'tiktokgirl':
 await XeonStickWait()
 var asupan = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/tiktokgirl.json'))
 var hasil = pickRandom(asupan)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'tiktokghea':
 await XeonStickWait()
 var gheayubi = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/gheayubi.json'))
 var hasil = pickRandom(gheayubi)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'tiktokbocil':
 await XeonStickWait()
 var bocil = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/bocil.json'))
 var hasil = pickRandom(bocil)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'tiktoknukhty':
 await XeonStickWait()
 var ukhty = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/ukhty.json'))
 var hasil = pickRandom(ukhty)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'tiktoksantuy':
 await XeonStickWait()
 var santuy = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/santuy.json'))
 var hasil = pickRandom(santuy)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'tiktokkayes':
 await XeonStickWait()
 var kayes = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/kayes.json'))
 var hasil = pickRandom(kayes)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'tiktokpanrika':
 await XeonStickWait()
 var rikagusriani = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/panrika.json'))
 var hasil = pickRandom(rikagusriani)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'tiktoknotnot':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokvids/notnot.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }}, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, video: { url: hasil.url }}, { quoted: m })
 break
 case 'chinese':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/china.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'hijab':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/hijab.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'indo':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/indonesia.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'japanese':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/japan.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'korean':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/korea.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'malay':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/malaysia.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'randomgirl':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/random.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'randomboy':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/random2.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'thai':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/thailand.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'vietnamese':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/tiktokpics/vietnam.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'aesthetic':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/aesthetic.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'antiwork':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/antiwork.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'blackpink':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/blackpink.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'bike':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/bike.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'boneka':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/boneka.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'cosplay':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/cosplay.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'cat':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/cat.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'doggo':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/doggo.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'justina':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/justina.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'kayes':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/kayes.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'kpop':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/kpop.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'notnot':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/notnot.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'car':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/car.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'couplepp': case 'ppcouple': {
 let anu = require('./MikoMedia/randompics/ppcouple.json')
@@ -5571,49 +5571,49 @@ case 'profilepic':  case 'profilepicture':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/profile.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'pubg':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/pubg.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'rose':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/rose.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'ryujin':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/ryujin.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'ulzzangboy':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/ulzzangboy.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'ulzzanggirl':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/ulzzanggirl.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'wallml': case 'wallpaperml':case 'mobilelegend':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/wallml.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'wallpaperphone': case 'wallphone':
 await XeonStickWait()
 var notnot = JSON.parse(fs.readFileSync('./MikoMedia/randompics/wallhp.json'))
 var hasil = pickRandom(notnot)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: hasil.url } }, { quoted: m })
 break
 case 'animewallpaper2': case 'animewall2': {
                 if (!args.join(" ")) return replygcxeon("What wallpaper are you looking for??")
@@ -5745,7 +5745,7 @@ if (/yuki/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.
 if (/yulibocil/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yulibocil.json')
 if (/yumeko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yumeko.json')
 let yeha = heyy[Math.floor(Math.random() * heyy.length)]
-XeonBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : mess.success }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : `${mess.succes}`s }, { quoted: m })
 }
 break
 case '>':
@@ -5855,14 +5855,14 @@ if (!m.isGroup) return XeonStickGroup()
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url:waifudd.data.url } }, { quoted: m })
 break
 case 'hentai-neko' :
 case 'hneko' :
 if (!m.isGroup) return XeonStickGroup()
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url:waifudd.data.url } }, { quoted: m })
 break
 case 'hentai-waifu' :
 case 'nwaifu' :
@@ -5870,28 +5870,28 @@ if (!m.isGroup) return XeonStickGroup()
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 await XeonStickWait()
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url:waifudd.data.url } }, { quoted: m })
 break
 case 'gasm':
 if (!m.isGroup) return XeonStickGroup()
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
 await XeonStickWait()						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url:waifudd.data.url } }, { quoted: m })
 break  
 case 'milf':
 if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/milf.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break 
 case 'animespank':
 if (!m.isGroup) return XeonStickGroup()
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/spank`)     
-            await XeonBotInc.sendMessage(m.chat, { caption:  mess.succes, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { caption:  `${mess.succes}`, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -5901,7 +5901,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/ahegao.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'ass':
 if (!m.isGroup) return XeonStickGroup()
@@ -5909,7 +5909,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/ass.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'bdsm':
 if (!m.isGroup) return XeonStickGroup()
@@ -5917,7 +5917,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/bdsm.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'blowjob':
 if (!m.isGroup) return XeonStickGroup()
@@ -5925,7 +5925,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/blowjob.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'cuckold':
 if (!m.isGroup) return XeonStickGroup()
@@ -5933,7 +5933,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/cuckold.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'cum':
 if (!m.isGroup) return XeonStickGroup()
@@ -5941,7 +5941,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/cum.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'eba':
 if (!m.isGroup) return XeonStickGroup()
@@ -5949,7 +5949,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/eba.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'ero':
 if (!m.isGroup) return XeonStickGroup()
@@ -5957,7 +5957,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/ero.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'femdom':
 if (!m.isGroup) return XeonStickGroup()
@@ -5965,7 +5965,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/femdom.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'foot':
 if (!m.isGroup) return XeonStickGroup()
@@ -5973,7 +5973,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/foot.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'gangbang':
 if (!m.isGroup) return XeonStickGroup()
@@ -5981,7 +5981,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/gangbang.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'glasses':
 if (!m.isGroup) return XeonStickGroup()
@@ -5989,7 +5989,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/glasses.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'hentai':
 if (!m.isGroup) return XeonStickGroup()
@@ -5997,7 +5997,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/hentai.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'jahy':
 if (!m.isGroup) return XeonStickGroup()
@@ -6005,7 +6005,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/jahy.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'manga':
 if (!m.isGroup) return XeonStickGroup()
@@ -6013,7 +6013,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/manga.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'masturbation':
 if (!m.isGroup) return XeonStickGroup()
@@ -6021,7 +6021,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/masturbation.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'neko-hentai':
 if (!m.isGroup) return XeonStickGroup()
@@ -6029,7 +6029,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/neko.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'neko-hentai2':
 if (!m.isGroup) return XeonStickGroup()
@@ -6037,7 +6037,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/neko2.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'nsfwloli':
 if (!m.isGroup) return XeonStickGroup()
@@ -6045,7 +6045,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/nsfwloli.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'orgy':
 if (!m.isGroup) return XeonStickGroup()
@@ -6053,7 +6053,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/orgy.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'panties':
 if (!m.isGroup) return XeonStickGroup()
@@ -6061,7 +6061,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/panties.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'pussy':
 if (!m.isGroup) return XeonStickGroup()
@@ -6069,7 +6069,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/pussy.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'tentacles':
 if (!m.isGroup) return XeonStickGroup()
@@ -6077,7 +6077,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/tentacles.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'thighs':
 if (!m.isGroup) return XeonStickGroup()
@@ -6085,7 +6085,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/thighs.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'yuri':
 if (!m.isGroup) return XeonStickGroup()
@@ -6093,7 +6093,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/yuri.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'zettai':
 if (!m.isGroup) return XeonStickGroup()
@@ -6101,7 +6101,7 @@ if (!m.isGroup) return XeonStickGroup()
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/zettai.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`s, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'gifblowjob':
 if (!m.isGroup) return XeonStickGroup()
@@ -6130,13 +6130,13 @@ let heyy
     let yeha = heyy[Math.floor(Math.random() * heyy.length)]
     if (/gifs/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/gifs.json')
     if (/foot/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/foot.json')
-XeonBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : mess.success }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : `${mess.succes}`s }, { quoted: m })
 }
 break
 case 'animeawoo':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6144,7 +6144,7 @@ break
 case 'animemegumin':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/megumin`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6152,7 +6152,7 @@ break
 case 'animeshinobu':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/shinobu`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6160,7 +6160,7 @@ break
 case 'animehandhold':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/handhold`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6168,7 +6168,7 @@ break
 case 'animehighfive':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/highfive`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6176,7 +6176,7 @@ break
 case 'animecringe':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/cringe`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6184,7 +6184,7 @@ break
 case 'animedance':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/dance`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6192,7 +6192,7 @@ break
 case 'animehappy':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/happy`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6200,7 +6200,7 @@ break
 case 'animeglomp':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/glomp`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6208,7 +6208,7 @@ break
 case 'animesmug':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/smug`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6216,7 +6216,7 @@ break
 case 'animeblush':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/blush`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6224,7 +6224,7 @@ break
 case 'animewave':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/wave`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6232,7 +6232,7 @@ break
 case 'animesmile':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/smile`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6240,7 +6240,7 @@ break
 case 'animepoke':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/poke`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6248,7 +6248,7 @@ break
 case 'animewink':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/wink`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6256,7 +6256,7 @@ break
 case 'animebonk':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/bonk`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6264,7 +6264,7 @@ break
 case 'animebully':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/bully`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6272,7 +6272,7 @@ break
 case 'animeyeet':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/yeet`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6280,7 +6280,7 @@ break
 case 'animebite':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/bite`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6288,7 +6288,7 @@ break
 case 'animelick':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/lick`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6296,7 +6296,7 @@ break
 case 'animekill':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/kill`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6304,7 +6304,7 @@ break
 case 'animecry':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/cry`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6312,7 +6312,7 @@ break
 case 'animewlp':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/wallpaper`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6320,7 +6320,7 @@ break
 case 'animekiss':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/kiss`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6328,7 +6328,7 @@ break
 case 'animehug':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/hug`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6336,7 +6336,7 @@ break
 case 'animeneko':{
 await XeonStickWait()
  waifudd = await axios.get(`https://waifu.pics/api/sfw/neko`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6344,7 +6344,7 @@ break
 case 'animepat':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/pat`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6352,7 +6352,7 @@ break
 case 'animeslap':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/slap`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6360,7 +6360,7 @@ break
 case 'animecuddle':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/cuddle`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6368,7 +6368,7 @@ break
 case 'animewaifu':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6376,7 +6376,7 @@ break
 case 'animenom':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/nom`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6384,7 +6384,7 @@ break
 case 'animefoxgirl':{
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/fox_girl`)       
-            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: mess.success}, { quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { image: { url:waifudd.data.url} , caption: `${mess.succes}`s}, { quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6392,7 +6392,7 @@ break
 case 'animetickle': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/tickle`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6400,7 +6400,7 @@ break
 case 'animegecg': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/gecg`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6408,7 +6408,7 @@ break
 case 'dogwoof': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/woof`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6416,7 +6416,7 @@ break
 case '8ballpool': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/8ball`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6424,7 +6424,7 @@ break
 case 'goosebird': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/goose`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6432,7 +6432,7 @@ break
 case 'animefeed': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/feed`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6440,7 +6440,7 @@ break
 case 'animeavatar': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/avatar`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6448,7 +6448,7 @@ break
 case 'lizardpic': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/lizard`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6456,7 +6456,7 @@ break
 case 'catmeow': {
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/meow`)     
-            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: mess.success},{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, {image: {url:waifudd.data.url}, caption: `${mess.succes}`s},{ quoted:m }).catch(err => {
                     return('Error!')
                 })
                 }
@@ -6772,7 +6772,7 @@ isForwarded: true,
             break
                         case 'coffee': case 'kopi': {
 XeonStickWait()
-                XeonBotInc.sendMessage(m.chat, {caption: mess.success, image: { url: 'https://coffee.alexflipnote.dev/random' }}, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, {caption: `${mess.succes}`s, image: { url: 'https://coffee.alexflipnote.dev/random' }}, { quoted: m })
             }
             break
             case 'wallpaper': {
@@ -7297,7 +7297,7 @@ if (!q) return replygcxeon("Link?")
 XeonStickWait()
 let res = await fetch(`https://vihangayt.me/download/instagram?url=${q}`)
 let json = await res.json()
-XeonBotInc.sendMessage(m.chat, { video: { url: json.data.data[0].url }, caption: mess.success }, {quoted: m})
+XeonBotInc.sendMessage(m.chat, { video: { url: json.data.data[0].url }, caption: `${mess.succes}`s }, {quoted: m})
 .catch(console.error)
 }
 break
@@ -7307,7 +7307,7 @@ if (!text) return replygcxeon("Link?")
 XeonStickWait()
 let resxeon = await fetch(`https://vihangayt.me/download/instagram?url=${text}`)
 let jsonxeon = await resxeon.json()
-XeonBotInc.sendMessage(m.chat, { image: { url: jsonxeon.data.data[0].url }, caption: mess.success }, {quoted:m})
+XeonBotInc.sendMessage(m.chat, { image: { url: jsonxeon.data.data[0].url }, caption: `${mess.succes}`s }, {quoted:m})
 .catch(console.error)
 }
 break
@@ -13956,7 +13956,7 @@ if(!text) return replygcxeon('linknya mana kak')
 XeonStickWait()
 const data = await fetchJson(`https://kiicodeofficial.my.id/api/others/capcut?url=${encodeURIComponent(text)}&apikey=${global.apikicode}`)
 const datap = data.data.url
-XeonBotInc.sendMessage(m.chat, { caption: mess.succes, video: {url:datap}}, {quoted: m})
+XeonBotInc.sendMessage(m.chat, { caption: `${mess.succes}`, video: {url:datap}}, {quoted: m})
 }
 break
 case 'tiktoksearch':
@@ -14005,7 +14005,7 @@ case 'p': case 'P':
  case 'papertext': case 'metallic': case 'circuit': case 'discovery': case 'fiction': case 'light': case 'stone': case 'magma': case 'berry': case 'glossy': case 'bear': case 'christmas': case 'devil': case 'neon': case 'blood': case 'glue': case 'dropwater': case 'firework': case 'carbon': case 'blackpink': case 'gradient': case 'broken': case 'harrypotter': case 'embossed': case 'imglitch': case 'transformer': case 'videogame': case 'greenhorror': case 'sketch': case 'skeleton':
    if(!text) replygcxeon('teksnya')
    XeonStickWait()
-   XeonBotInc.sendMessage(m.chat, { image: { url: `https://api.kimzzoffc.me/api/textpro/${command}?text=${text}&apikey=${global.apikimz}` }, caption: `${mess.success}` }, { quoted: m })
+   XeonBotInc.sendMessage(m.chat, { image: { url: `https://api.kimzzoffc.me/api/textpro/${command}?text=${text}&apikey=${global.apikimz}` }, caption: `${mess.succes}` }, { quoted: m })
    break
 case 'layered': case 'pornhub': case 'aglitch': case 'captainamerica': case 'choror': case 'spooky':
 
@@ -14014,7 +14014,7 @@ inilogo9 = args.join(" ")
 var logo4 = inilogo4.split('|')[0] 
 var logo9 = inilogo9.split('|')[1]
    XeonStickWait()
-   XeonBotInc.sendMessage(m.chat, { image: { url: `https://api.kimzzoffc.me/api/textpro/${command}?text=${logo4}&text2=${logo9}&apikey=${global.apikimz}` }, caption: `${mess.success}` }, { quoted: m })
+   XeonBotInc.sendMessage(m.chat, { image: { url: `https://api.kimzzoffc.me/api/textpro/${command}?text=${logo4}&text2=${logo9}&apikey=${global.apikimz}` }, caption: `${mess.succes}` }, { quoted: m })
    break
 case 'totalfitur':
                     case 'fitur': {
