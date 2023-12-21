@@ -2175,7 +2175,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 │々 *ʀᴜɴᴛɪᴍᴇ* : ${runtime(process.uptime())}
 │々 *ʙᴏᴛ*: ${global.botname}
 │々 *ɴᴏᴍᴏʀ ᴏᴡɴᴇʀ* : ${ownernumber}
-│々 *ᴘʀᴇꜰɪx* : ${global.prefix}
+│々 *ᴘʀᴇꜰɪx* : .
 │々 *ᴍᴏᴅᴇ* : ${XeonBotInc.public ? 'Public' : `Self`}
 │々 *ᴊᴜᴍʟᴀʜ ꜰɪᴛᴜʀ* : ${totalFitur()}
 ╰──────────⳹
