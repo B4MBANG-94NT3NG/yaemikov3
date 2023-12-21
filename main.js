@@ -168,6 +168,7 @@ try{
 			console.log(color(`\n🌿Connecting...`, 'yellow'))
 		}
 		if (update.connection == "open" || update.receivedPendingNotifications == "true") {
+		    await XeonBotInc.sendMessage(owner + "@s.whatsapp.net", { text: `*Bot Sudah Aktif Ya..!*\n\n\n_Jangan lupa follow akun instagram creator yaa_\n\n\n_Instagram : @someone.ex__\n\n\n_Whatsapp : 6287732200388_\n\n\n Terima Kasih` });
 			console.log(color(` `,'magenta'))
             console.log(color(`🌿Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2), 'yellow'))
 			await delay(1999)
