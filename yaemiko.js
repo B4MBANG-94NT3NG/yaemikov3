@@ -4060,6 +4060,7 @@ case 'remini': {
       XeonBotInc.sendImageAsSticker(from, ttp, m, { packname: global.packname, author: global.author })
       break
 			case 'mediafire': {
+		XeonStickWait()
 	if (args.length == 0) return replygcxeon(`Where is the link ?`)
 	if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return replygcxeon(`The link you provided is invalid`)
 	const { mediafireDl } = require('./lib/mediafire.js')
@@ -4076,6 +4077,7 @@ XeonBotInc.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : b
 }
 break
 case 'tiktok':{
+XeonStickWait()
 if (!q) return replygcxeon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
@@ -4084,6 +4086,7 @@ XeonBotInc.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.wat
 }
 break
 case 'tiktokaudio':{
+XeonStickWait()
 if (!q) return replygcxeon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
