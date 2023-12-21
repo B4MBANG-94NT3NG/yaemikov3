@@ -134,6 +134,7 @@ global.rpg = {
 //messages
 global.mess = {
     success: 'ini dia bg!', 
+    succes: 'ini dia bg!', 
     premium: 'maaf anda bukan pengguna premium',
 }
 
