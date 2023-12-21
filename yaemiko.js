@@ -2171,12 +2171,13 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
  ${xeonytimewisher} 😄
  
 ┍─────── *I N F O*
-│々 *ꜱᴘᴇᴇᴅ*  : ${latensie.toFixed(4)} miliseconds
+│々 *ꜱᴘᴇᴇᴅ*  : ${latensie.toFixed(4)} *miliseconds*
 │々 *ʀᴜɴᴛɪᴍᴇ* : ${runtime(process.uptime())}
 │々 *ʙᴏᴛ*: ${global.botname}
 │々 *ɴᴏᴍᴏʀ ᴏᴡɴᴇʀ* : ${ownernumber}
 │々 *ᴘʀᴇꜰɪx* : ${global.prefix}
-│々 *ᴍᴏᴅᴇ : ${XeonBotInc.public ? 'Public' : `Self`}
+│々 *ᴍᴏᴅᴇ* : ${XeonBotInc.public ? 'Public' : `Self`}
+│々 *ᴊᴜᴍʟᴀʜ ꜰɪᴛᴜʀ* : ${totalFitur()}
 ╰──────────⳹
 
 ┍─────── *U S E R*
@@ -2190,7 +2191,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 │々 *ᴛᴀɴɢɢᴀʟ* : ${xdate}
 └────────────┈ ⳹
 
-⚝───『 *Menu* 』───⚝
+⚝───『 *Simple Menu* 』───⚝
 │々 .allmenu
 │々 .cerpenmenu
 │々 .downloadmenu
