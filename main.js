@@ -168,7 +168,7 @@ try{
 			console.log(color(`\n🌿Connecting...`, 'yellow'))
 		}
 		if (update.connection == "open" || update.receivedPendingNotifications == "true") {
-		    await XeonBotInc.sendMessage(owner + "@s.whatsapp.net", { text: `*Bot Sudah Aktif Ya..!*\n\n\n_Jangan lupa follow akun instagram creator yaa_\n\n\n_Instagram : @someone.ex__\n\n\n_Whatsapp : 6287732200388_\n\n\n Terima Kasih` });
+		    await XeonBotInc.sendMessage(owner + "@s.whatsapp.net", { text: `*Bot Sudah Aktif Ya..!*\n_Jangan lupa follow akun instagram creator yaa_\n_Instagram : @someone.ex__\n\_Whatsapp : 6287732200388_\nTerima Kasih` });
 			console.log(color(` `,'magenta'))
             console.log(color(`🌿Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2), 'yellow'))
 			await delay(1999)
@@ -290,7 +290,7 @@ XeonLft = await getBuffer(ppuser)
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                xeonbody = `Halo @${xeonName.split("@")[0]}👋 selamat datang di group ${metadata.subject}\nJangan lupa intro sesuai format dibawah ini ya :\nNama:\nUmur:\nAskot:\nSemoga Betah\nTerima Kasih`
+                xeonbody = `Halo @${xeonName.split("@")[0]}👋 selamat datang di group ${metadata.subject}\nJangan lupa intro sesuai format dibawah ini ya :\n\n\nNama:\nUmur:\nAskot:\n\nSemoga Betah\n\n\nTerima Kasih`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
