@@ -3171,10 +3171,10 @@ if (!quoted) return replygcxeon(`Reply Image/Video`)
 await XeonStickWait()
 if (/image/.test(mime)) {
 anuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-XeonBotInc.sendMessage(m.chat, {image: {url:anuan}, caption: `Here you go!`, fileLength: "999", viewOnce : true},{quoted: m })
+XeonBotInc.sendMessage(m.chat, {image: {url:anuan}, caption: mess.succes, fileLength: "999", viewOnce : true},{quoted: m })
 } else if (/video/.test(mime)) {
 anuanuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-XeonBotInc.sendMessage(m.chat, {video: {url:anuanuan}, caption: `Here you go!`, fileLength: "99999999", viewOnce : true},{quoted: m })
+XeonBotInc.sendMessage(m.chat, {video: {url:anuanuan}, caption: mess.succes, fileLength: "99999999", viewOnce : true},{quoted: m })
 }
 }
 break
@@ -4081,7 +4081,7 @@ XeonStickWait()
 if (!q) return replygcxeon( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return replygcxeon(`Link Invalid!!`)
 require('./lib/tiktok').Tiktok(q).then( data => {
-XeonBotInc.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.watermark }}, {quoted:m})
+XeonBotInc.sendMessage(m.chat, { caption: mess.succes, video: { url: data.watermark }}, {quoted:m})
 })
 }
 break
@@ -5891,7 +5891,7 @@ if (!m.isGroup) return XeonStickGroup()
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 await XeonStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/spank`)     
-            await XeonBotInc.sendMessage(m.chat, { caption:  `Here you go!`, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
+            await XeonBotInc.sendMessage(m.chat, { caption:  mess.succes, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
