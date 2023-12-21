@@ -2164,8 +2164,8 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             let me = m.sender
             let timestampe = speed()
             let latensie = speed() - timestampe
-            xeonezy = `☰ *D A S B O A R D* ☰
-            
+            xeonezy = `
+ ☰ *D A S B O A R D* ☰          
  Hi 👋 
  ${pushname} 
  ${xeonytimewisher} 😄
@@ -2214,15 +2214,12 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 │々 .othermenu
 └─────────────────┈ ⳹
 
-Thanks To :
-1. DgXeon (SC ORI)
-2. All Creator Bot
-
-
 - Follow My Instagram
 instagram.com/${global.socialm}⚡⚡
-⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕
-          『 *©${global.botname}* 』`
+
+
+  ⌕  ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚  ⌕
+  『 *©${global.botname}* 』`
             let ments = [ownernya, me, mark]        
            XeonBotInc.sendMessage(from, { 
 text: xeonezy,
