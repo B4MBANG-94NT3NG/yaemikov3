@@ -34,6 +34,8 @@ const makeWASocket = require("@whiskeysockets/baileys").default
 const { uncache, nocache } = require('./lib/loader')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep, reSize } = require('./lib/myfunc')
+let _welcome = JSON.parse(fs.readFileSync('./database/welcome.json'));
+let _left = JSON.parse(fs.readFileSync('./database/left.json'));
 
 const prefix = ''
 
@@ -265,6 +267,8 @@ ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 		});
 		
 XeonBotInc.ev.on('group-participants.update', async (anu) => {
+const isWelcome = _welcome.includes(anu.id)
+const isLeft = _left.includes(anu.id)
 console.log(anu)
 try {
 let metadata = await XeonBotInc.groupMetadata(anu.id)
@@ -284,13 +288,13 @@ ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 memb = metadata.participants.length
 XeonWlcm = await getBuffer(ppuser)
 XeonLft = await getBuffer(ppuser)
-                if (anu.action == 'add') {
+                if (anu.action == 'add' && (isWelcome || global.welcome)) {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                xeonbody = `Halo @${xeonName.split("@")[0]}👋 selamat datang di group ${metadata.subject}\nJangan lupa intro sesuai format dibawah ini ya :\n\n\nNama:\nUmur:\nAskot:\n\nSemoga Betah\n\n\nTerima Kasih`
+                xeonbody = `Halo @${xeonName.split("@")[0]}👋 selamat datang di group ${metadata.subject}\n\nJangan lupa intro sesuai format dibawah ini ya :\n\nNama:\nUmur:\nAskot:\n\nSemoga Betah\n\nTerima Kasih`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -303,7 +307,7 @@ XeonBotInc.sendMessage(anu.id,
 "thumbnailUrl": ``,
 "thumbnail": XeonWlcm,
 "sourceUrl": `${wagc}`}}})
-                } else if (anu.action == 'remove') {
+                } else if (anu.action == 'remove' && (isWelcome || global.left)) {
                 	const xeonbuffer = await getBuffer(ppuser)
                     const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
