@@ -5924,6 +5924,7 @@ XeonBotInc.sendMessage(m.chat, { caption:`${mess.succes}`, image: { url:waifudd.
 break  
 case 'milf':
 if (!m.isGroup) return XeonStickGroup()
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
 await XeonStickWait()
 var ahegaonsfw = JSON.parse(fs.readFileSync('./MikoMedia/nsfw/milf.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
