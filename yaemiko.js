@@ -2174,7 +2174,7 @@ cptmenu = ` Hi ${pushname}  👋
 *[ ᴍᴇɴᴜ ]*
 *.ꜱɪᴍᴘʟᴇᴍᴇɴᴜ*
 *.ᴀʟʟᴍᴇɴᴜ*`
-XeonBotInc.sendMessage(m.chat, { image: { url: `${global.thumb}`}, caption: cptmenu}, {quoted: m})
+XeonBotInc.sendMessage(m.chat, { image: { url: `https://telegra.ph/file/85097915e582651bbe202.jpg`}, caption: cptmenu}, {quoted: m})
 }
 break
 case 'simplemenu': {
