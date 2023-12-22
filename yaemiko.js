@@ -2210,26 +2210,31 @@ case 'simplemenu': {
 │々 *ᴛᴀɴɢɢᴀʟ* : ${xdate}
 └────────────┈ ⳹
 
+┍─────── *I N F O  C M D* 
+│々 *Ⓟ* = *Premium*
+│々 *Ⓕ* = *Free*
+╰──────────⳹
+
 ⚝───『 *Simple Menu* 』───⚝
-│々 .cerpenmenu
-│々 .downloadmenu
-│々 .funmenu
-│々 .aimenu
-│々 .groupmenu
-│々 .ownermenu
-│々 .photooxymenu
-│々 .ephoto360menu
-│々 .textpromenu
-│々 .animemenu
-│々 .nsfwmenu
-│々 .rpgmenu
-│々 .randomphotomenu
-│々 .randomvideomenu
-│々 .stickermenu
-│々 .databasemenu
-│々 .stalkermenu
-│々 .bugmenu
-│々 .othermenu
+│々 .cerpenmenu Ⓕ
+│々 .downloadmenu Ⓕ
+│々 .funmenu Ⓕ
+│々 .aimenu Ⓕ
+│々 .groupmenu Ⓕ
+│々 .ownermenu Ⓕ
+│々 .photooxymenu Ⓕ
+│々 .ephoto360menu Ⓕ
+│々 .textpromenu Ⓟ
+│々 .animemenu Ⓕ
+│々 .nsfwmenu Ⓕ
+│々 .rpgmenu Ⓕ
+│々 .randomphotomenu Ⓕ
+│々 .randomvideomenu Ⓕ
+│々 .stickermenu Ⓕ
+│々 .databasemenu Ⓕ
+│々 .stalkermenu Ⓕ
+│々 .bugmenu Ⓟ
+│々 .othermenu Ⓕ
 └─────────────────┈ ⳹
 
 - Follow My Instagram
