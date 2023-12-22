@@ -2175,6 +2175,7 @@ cptmenu = ` Hi ${pushname}  👋
 *.ꜱɪᴍᴘʟᴇᴍᴇɴᴜ*
 *.ᴀʟʟᴍᴇɴᴜ*`
 XeonBotInc.sendMessage(m.chat, { image: { url: `${global.thumb}`}, caption: cptmenu}, {quoted: m})
+}
 break
 case 'simplemenu': {
        await loading()
