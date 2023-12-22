@@ -2176,7 +2176,7 @@ cptmenu = ` Hi ${pushname}  👋
 *.ᴀʟʟᴍᴇɴᴜ*`
 XeonBotInc.sendMessage(m.chat, { image: { url: `${global.thumb}`}, caption: cptmenu}, {quoted: m})
 break
-case 'simplemenu' {
+case 'simplemenu': {
        await loading()
 	        let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
