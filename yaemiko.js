@@ -2210,7 +2210,6 @@ case 'simplemenu' {
 └────────────┈ ⳹
 
 ⚝───『 *Simple Menu* 』───⚝
-│々 .allmenu
 │々 .cerpenmenu
 │々 .downloadmenu
 │々 .funmenu
