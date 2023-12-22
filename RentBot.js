@@ -10,7 +10,7 @@ const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep, reSize } = require('./lib/myfunc')
 const owner = JSON.parse(fs.readFileSync('./database/owner.json').toString())
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
-
+let phoneNumber = "6287732200388"
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 
 if (global.conns instanceof Array) console.log()
