@@ -1700,7 +1700,7 @@ async function replyprem(teks) {
         }
 
 // Anti Link
-        if (Antilinkgc) {
+        if (,gc) {
         if (budy.match(`chat.whatsapp.com`)) {
         if (!isBotAdmins) return XeonStickBotAdmin()
         let gclink = (`https://chat.whatsapp.com/`+await XeonBotInc.groupInviteCode(m.chat))
@@ -3800,7 +3800,7 @@ if (args[0] === "on") {
 if (Antilinkgc) return replygcxeon('Already activated')
 ntlinkgc.push(from)
 fs.writeFileSync('./database/antilinkgc.json', JSON.stringify(ntlinkgc))
-replygcxeon('Sukses mengaktifkan antiwame di grup ini')
+replygcxeon('Sukses mengaktifkan antilinkgc di grup ini')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -3813,7 +3813,7 @@ if (!Antilinkgc) return replygcxeon('Already deactivated')
 let off = ntlinkgc.indexOf(from)
 ntlinkgc.splice(off, 1)
 fs.writeFileSync('./database/antilinkgc.json', JSON.stringify(ntlinkgc))
-replygcxeon('Success in turning off antiwame in this group')
+replygcxeon('Success in turning off antilinkgc in this group')
 } else {
 await replygcxeon(`Please Type The Option\n\nExample: ${prefix + command} on\nExample: ${prefix + command} off\n\non to enable\noff to disable`)
   }
@@ -14069,6 +14069,17 @@ instagram.com/${global.socialm}⚡⚡
                     XeonBotInc.sendMessage(m.chat, { image: global.thumb, caption: anu }, { qouted: m })
                     }
                     break
+case 'bingimg':
+case 'bingimage': {
+  if (!text) return replygcxeon(`Example : ${command} siapakah elon musk`)
+  reply(mess.wait)
+let data = await fetchJson(`https://kiicodeofficial.my.id/api/ai/disney?q=${encodeURIComponent(text)}&apikey=${global.apikicode}`);
+if (data.data && data.data.murl) {
+  const bingimg = data.data.murl;
+XeonBotInc.sendMessage(m.chat, { caption: `*Hasil Dari promt:*\n${text}`, image: { url: bingimg } }, { quoted: m });
+}
+}
+break
 default:
 if (budy.startsWith('<')) {
 if (!XeonTheCreator) return
