@@ -34,7 +34,7 @@ global.location = "Brebes, Jawa Tengah, Indonesia" //ur location
 //YANG LAIN SCRAPE
 
 //new
-global.welcome = true
+global.welcome = false
 global.left = false
 global.lol = "7a42b0bf3636288484cfe9a7" //APIKEY LOLHUMAN
 global.apikicode = "Dzsyacans" //APIKEY KIICODE
