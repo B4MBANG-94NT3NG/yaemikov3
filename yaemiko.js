@@ -1700,7 +1700,7 @@ async function replyprem(teks) {
         }
 
 // Anti Link
-        if (,gc) {
+        if (Antilinkgc) {
         if (budy.match(`chat.whatsapp.com`)) {
         if (!isBotAdmins) return XeonStickBotAdmin()
         let gclink = (`https://chat.whatsapp.com/`+await XeonBotInc.groupInviteCode(m.chat))
